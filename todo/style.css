@@ -1,0 +1,389 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+    min-height: 100vh;
+    transition: 0.3s;
+}
+
+
+/* =========================
+   APP CONTAINER
+========================= */
+
+.app {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 25px 20px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.greeting {
+    font-size: 13px;
+    font-weight: bold;
+    color: #6366f1;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.header h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+#date {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.theme-btn {
+    border: none;
+    background: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+
+/* =========================
+   PROGRESS CARD
+========================= */
+
+.progress-card {
+    background: #111827;
+    color: white;
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.progress-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress-top p {
+    color: #cbd5e1;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.progress-top h2 {
+    font-size: 36px;
+}
+
+.progress-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 5px solid #6366f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 9px;
+    background: #374151;
+    border-radius: 20px;
+    margin: 20px 0 12px;
+    overflow: hidden;
+}
+
+#progressFill {
+    width: 0%;
+    height: 100%;
+    background: #6366f1;
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+
+#motivation {
+    font-size: 13px;
+    color: #d1d5db;
+}
+
+
+/* =========================
+   ADD TASK
+========================= */
+
+.add-task {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    outline: none;
+    font-size: 15px;
+    background: white;
+}
+
+#taskInput:focus {
+    border-color: #6366f1;
+}
+
+#addBtn {
+    border: none;
+    background: #6366f1;
+    color: white;
+    padding: 0 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#addBtn:hover {
+    background: #4f46e5;
+}
+
+
+/* =========================
+   TASK SECTION
+========================= */
+
+.tasks-section {
+    margin-bottom: 25px;
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.section-title h2 {
+    font-size: 20px;
+}
+
+#taskCount {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+
+/* =========================
+   TASK
+========================= */
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    padding: 15px;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+
+.checkbox {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    accent-color: #6366f1;
+}
+
+.task-text {
+    flex: 1;
+    font-size: 15px;
+}
+
+.task.completed .task-text {
+    text-decoration: line-through;
+    color: #9ca3af;
+}
+
+.edit-btn,
+.delete-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 17px;
+    padding: 5px;
+}
+
+.edit-btn {
+    color: #6366f1;
+}
+
+.delete-btn {
+    color: #ef4444;
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-state {
+    text-align: center;
+    padding: 45px 20px;
+    background: white;
+    border-radius: 15px;
+}
+
+.empty-state div {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.empty-state h3 {
+    margin-bottom: 5px;
+}
+
+.empty-state p {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+/* =========================
+   STREAK
+========================= */
+
+.streak-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+}
+
+.streak-icon {
+    font-size: 35px;
+}
+
+.streak-card p {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.streak-card h2 {
+    font-size: 22px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    color: #9ca3af;
+    font-size: 13px;
+    padding: 10px;
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark {
+    background: #0f172a;
+    color: #f8fafc;
+}
+
+body.dark #taskInput,
+body.dark .task,
+body.dark .empty-state,
+body.dark .streak-card,
+body.dark .theme-btn {
+    background: #1e293b;
+    color: white;
+}
+
+body.dark #taskInput {
+    border-color: #475569;
+}
+
+body.dark #date,
+body.dark #taskCount,
+body.dark .streak-card p {
+    color: #94a3b8;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .app {
+        padding: 20px 15px;
+    }
+
+    .header h1 {
+        font-size: 26px;
+    }
+
+    .progress-card {
+        padding: 20px;
+    }
+
+    .progress-top h2 {
+        font-size: 30px;
+    }
+
+    .add-task {
+        flex-direction: column;
+    }
+
+    #addBtn {
+        padding: 14px;
+    }
+
+    .task {
+        padding: 13px;
+    }
+
+    .task-text {
+        font-size: 14px;
+    }
+
+    .edit-btn,
+    .delete-btn {
+        font-size: 15px;
+    }
+}
